@@ -1,3 +1,4 @@
-# html-casino-games
+# doug-doug-doug.github.io
 
-Some html casino games. Currently just roulette (european) and blackjack.
+## Demos:
+  Casino games (from html-casino-games): Some html casino games. Currently just roulette (european) and blackjack.
