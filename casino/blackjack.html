@@ -34,7 +34,7 @@ position:absolute;
 width:100%;
 background-size:cover;
 background-position:center;
-background-image:url("blackjack_table.jpg");
+background-image:url("assets/blackjack/blackjack_table.jpg");
 }
 </style>
 <style id='targetStyle'>
@@ -91,17 +91,17 @@ function randCard(player){
 	deck[suite].splice(deck[suite].indexOf(card),1);
 	if (player == 'player'){
 		elem = document.createElement("img");  
-		elem.setAttribute('src','cards/'+card+suite+'.png');
+		elem.setAttribute('src','assets/blackjack/cards/'+card+suite+'.png');
 		elem.setAttribute('class','card');
 		document.getElementById('display_window').appendChild(elem);
 	}
 	if (player == 'bot'){
 		elem = document.createElement("img");  
-		elem.setAttribute('src','cards/'+card+suite+'.png');
+		elem.setAttribute('src','assets/blackjack/cards/'+card+suite+'.png');
 		elem.setAttribute('class','card showlater');
 		document.getElementById('bot_display_window').appendChild(elem);
 		elem2 = document.createElement("img");  
-		elem2.setAttribute('src','cards/red_back.png');
+		elem2.setAttribute('src','assets/blackjack/cards/red_back.png');
 		elem2.setAttribute('class','card hidelater');
 		document.getElementById('bot_display_window').appendChild(elem2);
 	}
