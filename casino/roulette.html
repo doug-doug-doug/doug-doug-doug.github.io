@@ -119,11 +119,11 @@ function bets(number, bet){ /* bets(actionSpin(),bet) */
 						}
 					}
 					else{
-						die
+						throw "Something went wrong!"
 					}
 				}
 				else{
-					die
+					throw "Something went wrong!"
 				}
 			}
 			/* Outside bets */
@@ -182,7 +182,7 @@ function bets(number, bet){ /* bets(actionSpin(),bet) */
 					}
 				}
 				else{
-					die
+					throw "Something went wrong!"
 				}
 			}
 			if (bet[0] == 'doublestreet'){
@@ -199,10 +199,10 @@ function bets(number, bet){ /* bets(actionSpin(),bet) */
 				}
 				var rows_mod = unique.split(' ').slice(1);
 				if (rows_mod.length > 2){
-					die
+					throw "Something went wrong!"
 				}
 				if (Math.abs(parseInt(rows_mod[0])-parseInt(rows_mod[1])) != 1){
-					die
+					throw "Something went wrong!"
 				}
 				for (x in bet){
 					bet[x] = parseInt(bet[x]);
@@ -214,7 +214,7 @@ function bets(number, bet){ /* bets(actionSpin(),bet) */
 			if (bet[0] == 'corner'){
 				bet.splice(0,1);
 				if (bet.length > 4){
-					die
+					throw "Something went wrong!"
 				}
 				var rows = ['','','',''];
 				for (var x in bet){
@@ -229,10 +229,10 @@ function bets(number, bet){ /* bets(actionSpin(),bet) */
 				
 				var rows_mod = unique.split(' ').slice(1);
 				if (rows_mod.length > 2){
-					die
+					throw "Something went wrong!"
 				}
 				if (Math.abs(parseInt(rows_mod[0])-parseInt(rows_mod[1])) != 1){
-					die
+					throw "Something went wrong!"
 				}
 				var columns = '';
 				for (x in bet){
@@ -244,7 +244,7 @@ function bets(number, bet){ /* bets(actionSpin(),bet) */
 				columns = columns.split(' ')
 				columns.splice(0,1);
 				if (columns.length > 2 || Math.abs(parseInt(columns[0])-parseInt(columns[1])) != 1){
-					die
+					throw "Something went wrong!"
 				}
 				if (number == parseInt(columns[0]) || number == parseInt(columns[1])){
 					var win = true;
@@ -257,7 +257,7 @@ function bets(number, bet){ /* bets(actionSpin(),bet) */
 			}
 		}
 		else{
-			die
+			throw "Something went wrong!"
 		}
 		if (win){
 			setTimeout(function (){document.getElementById('winmsg').style.display = 'block'},5000);
